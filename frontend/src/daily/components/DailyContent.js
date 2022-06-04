@@ -8,19 +8,20 @@ import { Link } from 'react-router-dom';
 
 export const DailyContent = (daily) => {
     let eva;
-    if(daily.evaluation === 'perfect'){
+    if (daily.evaluation === 'perfect') {
         eva = "hello";
-    }else if(daily.evaluation === 'good'){
+    } else if (daily.evaluation === 'good') {
         eva = "good night";
-    }else if(daily.evaluation === 'soso'){
+    } else if (daily.evaluation === 'soso') {
         eva = "see you";
-    }else{
+    } else {
         eva = "good morning";
     }
 
-    return(
+    return (
         <div>
-            <Link to={`daily/${daily.id}`}> <h1>{daily.date}</h1> </Link> 
+            {/* /が足りなかった */}
+            <Link to={`/daily/${daily.id}`}> <h1>{daily.date}</h1> </Link>
             {/* <img src={eva}/> */}
         </div>
     )

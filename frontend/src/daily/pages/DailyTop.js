@@ -8,32 +8,32 @@ export const DailyTop = () => {
     const initialState = {
         id: '',
         date: '',
-        evaluation: '',   
+        evaluation: '',
     }
 
-    const[daily, setDaily] = useState(initialState);
-    const[loading, setLoading] = useState(true);
+    const [daily, setDaily] = useState(initialState);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getDaily()
-        .then(d => {
-            setDaily(d)
-            setLoading(false)
-        })
-        .catch(e => {
-            throw new Error(e)
-        })
-    },[])
+            .then(d => {
+                setDaily(d)
+                setLoading(false)
+            })
+            .catch(e => {
+                throw new Error(e)
+            })
+    }, [])
 
-    return(
+    return (
         <div>
             {
                 loading ?
-                <h1>loading...</h1>
-                :
-                <div>
-                {daily.map( d => <DailyContent {...d}  /> )}
-                </div>
+                    <h1>loading...</h1>
+                    :
+                    <li>
+                        {daily.map(d => <DailyContent {...d} />)}
+                    </li>
             }
             <CategoryList />
         </div>
