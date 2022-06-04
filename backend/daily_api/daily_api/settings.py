@@ -50,7 +50,6 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
-    # 異なるオリジンで動作するから、その間のHTTPリクエストを許可する必要がある。
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',  # これ
     'django.middleware.security.SecurityMiddleware',
@@ -64,6 +63,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (  # これ
     'http://localhost:3000',
+    'http://127.0.0.1:3000',
 )
 
 ROOT_URLCONF = 'daily_api.urls'
