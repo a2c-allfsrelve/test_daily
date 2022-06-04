@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Header } from './Header';
 import { Top } from './Top';
 import { DailyTop } from './daily/pages/DailyTop';
@@ -8,23 +8,24 @@ import {DailyDetail} from './daily/pages/DailyDetail';
 // import { Profile} from './profile/Profile';
 
 // export {Switch} from 'react-router-dom';
-export default App;
+
 export const App = () => {  
   return(
-    <div>
-      <Router>
+    <div className="layout_container__3sC0E">
+      <BrowserRouter>
         <Header />
         <div>
-          {/* <Switch> */}
-              <Route exact path='/' component={Top} />
-              <Route exact path='/daily' component={DailyTop} />
-              <Route exact path='/daily/:id' component={DailyDetail} />
-              <Route exact path='/daily/category/:cat' component={CategoryView}/>
+          <Routes>
+              <Route path='/' element={<Top />} />
+              <Route path='/daily' element={<DailyTop />} />
+              <Route path='/daily/:id' element={<DailyDetail />} />
+              <Route path='/daily/category/:cat' element={<CategoryView />}/>
               {/* <Route path='/profile' component={Profile}/> */}
               <Route render={() => <h4>not found...</h4>} />
-          {/* </Switch> */}
+          </Routes>
         </div>
-      </Router>
+      </BrowserRouter>
     </div>
   )  
 }
+export default  App;
