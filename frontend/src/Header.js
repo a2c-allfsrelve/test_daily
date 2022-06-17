@@ -9,6 +9,8 @@ export const Header = () => {
             </h1>
                 <ul>
                     <li><Link to='/daily'>日報</Link></li>
+                    <li><Link to='/profile'>Profile</Link></li>
+                    <li><Link to='contact'>Contact</Link></li>
                 </ul>
         </div>
     )

@@ -48,3 +48,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.top,.profile_top{
+  text-align: center;
+}
+.top h1,h2,h3{
+  color: #FDFDFD;
+}
+.profile_top h1,h2,h3{
+  color: #FDFDFD;
+}
+.contact_label{
+  display: flex; 
+  flex-flow: column;
+}
+.contact_label p{
+  font-weight: bold;
+  margin-bottom:10px;
+  margin-top:20px;
+}
+.contact_label input{
+  width:45%;
+  height:30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.contact_label textarea{
+  height:100px;
+  width:45%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.controls{
+  padding:30px;
+}
+.sbm_button{
+  width:150px;
+  height:60px;
+  line-height:60px;
+  margin:10px;
+}
+.sbm_button input{
+  display:block;
+  width:100%;
+  height:100%;
+  text-decoration: none;
+  background:#FAB693;
+  text-align:center;
+  border:5px solid #FAB693;
+  color:#FFFFFF;
+  font-size:20px;
+  font-weight:bold;
+  border-radius:35px;
+  -webkit-border-radius:35px;
+  -moz-border-radius:35px;
+  transition: all 0.5s ease;
+}
+.sbm_button input:hover{
+  background:#FFFFFF;
+  color:#FAB693;
+  box-shadow:none;
+}
