@@ -36,19 +36,19 @@ export const DailyDetail = () => {
             {loading ?
                 <h1>loading....</h1>
                 :
-                <div>
-                    <h1>{detail.date}</h1>
-                    <h1>大学のこと</h1>
+                <div className='detail_daily'>
+                    <h1 className='detail_name'>{detail.date}</h1>
+                    <h2 className='about_school'>大学のこと</h2>
                     <div dangerouslySetInnerHTML={{ __html: `${marked(`${detail.univ}`)}` }} className="detail-content"></div>
-                    <h1>勉強</h1>
+                    <h2 className='about_study'>勉強</h2>
                     <div dangerouslySetInnerHTML={{ __html: `${marked(`${detail.study}`)}` }} className="detail-content"></div>
-                    <h1>その他</h1>
+                    <h2 className='about_etc'>その他</h2>
                     <div dangerouslySetInnerHTML={{ __html: `${marked(`${detail.other}`)}` }} className="detail-content"></div>
-                    <h1>初めましてだったこと</h1>
+                    <h2 className='about'>初めましてだったこと</h2>
                     <div dangerouslySetInnerHTML={{ __html: `${marked(`${detail.first_meet}`)}` }} className="detail-content"></div>
-                    <h1>やりたいこと</h1>
+                    <h2 className='do_about'>やりたいこと</h2>
                     <div dangerouslySetInnerHTML={{ __html: `${marked(`${detail.wanna_do}`)}` }} className="detail-content"></div>
-                    <h1>1日のまとめ</h1>
+                    <h2 className='about_day'>1日のまとめ</h2>
                     <div dangerouslySetInnerHTML={{ __html: `${marked(`${detail.summary}`)}` }} className="detail-content"></div>
                 </div>
             }

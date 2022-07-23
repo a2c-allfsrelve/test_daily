@@ -5,7 +5,7 @@ export default marked;
 
 export const CategoryList = () => {
     return (
-        <div>
+        <div className='category_list'>
             <ul>
                 <li key={'univ'}><Link to='/daily/category/univ'>大学</Link></li>
                 <li key={'study'}><Link to='/daily/category/study'>勉強</Link></li>

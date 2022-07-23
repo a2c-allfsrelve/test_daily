@@ -27,15 +27,18 @@ export const DailyTop = () => {
 
     return (
         <div>
-            {
-                loading ?
-                    <h1>loading...</h1>
-                    :
-                    <li>
-                        {daily.map(d => <DailyContent {...d} />)}
-                    </li>
-            }
             <CategoryList />
+            <div className='contents_container'>
+                {
+                    loading ?
+                        <h1>loading...</h1>
+                        :
+                        <li>
+                            {daily.map(d => <DailyContent {...d} />)}
+                        </li>
+                }
+                
+            </div>
         </div>
     )
 

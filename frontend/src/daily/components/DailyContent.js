@@ -19,9 +19,9 @@ export const DailyContent = (daily) => {
     }
 
     return (
-        <div>
+        <div className='daily_contents'>
             {/* /が足りなかった */}
-            <Link to={`/daily/${daily.id}`}> <h1>{daily.date}</h1> </Link>
+            <Link to={`/daily/${daily.id}`}> {daily.date} </Link>
             {/* <img src={eva}/> */}
         </div>
     )
