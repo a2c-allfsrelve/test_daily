@@ -23,3 +23,9 @@ class Evaluation(models.Model):
 
     def __str__(self):
         return self.evaluation
+
+class Contact(models.Model):
+    contact = MarkdownxField() #追加・お問い合わせ用
+
+    def __str__(self):
+        return self.contact
